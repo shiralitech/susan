@@ -9,11 +9,11 @@ from opencensus.ext.azure.log_exporter import AzureLogHandler
 
 
 class FunctionName:
-    ED = "event_driven"
+    CI = "collect_image"
 
 
 PACKAGES = {
-    FunctionName.ED: "event_driven",
+    FunctionName.CI: "collect_image",
 }
 
 
