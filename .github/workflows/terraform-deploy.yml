@@ -85,6 +85,7 @@ jobs:
   terraform-apply:
     name: Terraform Apply
     runs-on: ubuntu-latest
+    environment: prod
     needs: terraform-plan
 
     defaults:
