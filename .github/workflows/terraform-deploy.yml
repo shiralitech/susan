@@ -7,7 +7,6 @@ env:
   RESOURCE_GROUP: ${{ secrets.RESOURCE_GROUP_NAME }}
   TERRAFORM_STORAGE_ACCOUNT: ${{ secrets.TERRAFORM_STORAGE_ACCOUNT_NAME }}
   AZURE_SP_CREDENTIALS: ${{ secrets.AZURE_SP_CREDENTIALS }}
-  SOLUTION_STORAGE_ACCOUNT: ${{ secrets.SOLUTION_STORAGE_ACCOUNT_NAME }}
 
 jobs:
   terraform-plan:
@@ -42,8 +41,7 @@ jobs:
         run: |
           echo "TF_VAR_resource_group_name=${{ env.RESOURCE_GROUP }}" >> $GITHUB_ENV
           echo "TF_VAR_service_principal_secret=$(jq '.clientSecret' -r <<< '${{ env.AZURE_SP_CREDENTIALS }}')" >> $GITHUB_ENV
-          echo "TF_VAR_storage_account_name=${{ env.SOLUTION_STORAGE_ACCOUNT }}" >> $GITHUB_ENV
-      
+
       - name: Verify Terraform Backend
         run: |
           chmod +x $GITHUB_WORKSPACE/.github/terraform-backend.sh
