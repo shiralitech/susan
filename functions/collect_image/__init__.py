@@ -1,4 +1,4 @@
-"""event driven function entrypoint"""
+"""collect image function entrypoint"""
 
 import os
 import json
@@ -10,11 +10,11 @@ from utils.logging import FunctionName, init_logging
 
 APP_INSIGHTS_CNX_STR = os.getenv("APP_INSIGHTS_CNX_STR")
 
-logger = init_logging(function_name=FunctionName.ED, cnx_str=APP_INSIGHTS_CNX_STR)
+logger = init_logging(function_name=FunctionName.CI, cnx_str=APP_INSIGHTS_CNX_STR)
 
 
 def main(msg: func.QueueMessage) -> None:
-    logger.info("\n\n event driven function has been invoked!")
+    logger.info("\n\n collect image function has been invoked!")
 
     # parse msg data
     try:

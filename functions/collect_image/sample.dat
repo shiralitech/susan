@@ -1,6 +1,6 @@
 {
   "topic": "/subscriptions/ca0cd4ab-5601-489a-9e4b-53db45be5503/resourceGroups/yourResourceGroup/providers/Microsoft.Storage/storageAccounts/yourStorageAccount",
-  "subject": "/blobServices/default/containers/input/blobs/sample.txt",
+  "subject": "/blobServices/default/containers/input/blobs/sample.HEIC",
   "event_type": "Microsoft.Storage.BlobCreated",
   "id": "6adb0d2b-b01e-0016-3265-fd220106993b",
   "data": {
@@ -11,7 +11,7 @@
     "contentType": "application/text",
     "contentLength": 10416178,
     "blobType": "BlockBlob",
-    "url": "https://yourStorageAccount.blob.core.windows.net/input/sample.txt",
+    "url": "https://yourStorageAccount.blob.core.windows.net/input/sample.HEIC",
     "sequencer": "00000000000000000000000000000DD6000000000138290d",
     "storageDiagnostics": {
       "batchId": "bd2ec945-d006-0000-0065-fdd4d6000000"
